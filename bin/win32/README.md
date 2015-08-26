@@ -1,4 +1,4 @@
-# TrickyCoin-Qt v.1.0.2.0 & TrickyCoind v.1.0.2.0 binaries for Windows.
+## TrickyCoin-Qt & TrickyCoind v.1.0.2.0 binaries for Windows.
 
 Here you can download [**TrickyCoin-Qt v.1.0.2.0**](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoin-Qt.zip) build using:
 * Qt 5.5 (static, which means no .dll files needed) with mingw32-i686 gcc v.4.92 (included to Qt 5.5).
