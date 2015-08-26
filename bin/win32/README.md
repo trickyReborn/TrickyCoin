@@ -7,6 +7,7 @@ Libs used:
 * Berkeley DB v.6.1.26
 * openssl v.1.0.2d
 * miniupnpc v.1.9.
+
 Added an [UPX-compressed binary](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoin-Qt-UPX.zip) (UPX v.3.91w).
 
     TrickyCoin-Qt.exe MD5: 3f2186026270b8f9e5ebfce90863d014 
@@ -14,7 +15,7 @@ Added an [UPX-compressed binary](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoin
     TrickyCoin-Qt-UPX.exe MD5: 9d3e04ffaf3c7332edf3243562b669a6
     [TrickyCoin-Qt-UPX.zip](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoin-Qt-UPX.zip) MD5: 3a845a1c3cde130663247324521d27bf
 
-All other hashes included.
+All other hashes included in repository.
 
 TrickyCoind v.1.0.2.0 (static) build using MSYS2 with mingw32-i686 gcc v.5.2 (thanks to pacman package manager).
 Libs used: boost v.1.59, Berkeley DB v.6.1.26, openssl v.1.0.2d and miniupnpc v.1.9. Added an UPX-compressed binary (UPX v.3.91w).
