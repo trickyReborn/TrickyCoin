@@ -30,7 +30,7 @@
 # some w10 junk
 photothumb.db
 
-# qt build junk
+# Qt build junk
 /Makefile
 /Makefile.Release
 /Makefile.Debug
