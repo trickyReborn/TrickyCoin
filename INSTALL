@@ -1,0 +1,9 @@
+Building TrickyCoin
+
+See doc/readme-qt.rst for instructions on building trickycoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of trickycoin.
+
+See doc/build-*.txt for instructions on building trickycoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of trickcoin.
