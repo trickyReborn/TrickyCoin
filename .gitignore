@@ -26,3 +26,17 @@
 *.exe
 *.out
 *.app
+
+# some w10 junk
+photothumb.db
+
+# qt build junk
+/Makefile
+/Makefile.Release
+/Makefile.Debug
+/build/*
+/debug/
+/release/
+*.qm
+/object_script.*
+/trickycoin-qt_plugin_import.cpp
