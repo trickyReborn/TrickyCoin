@@ -1,12 +1,12 @@
 TEMPLATE = app
-TARGET = TrickyCoin-qt
-VERSION = 1.0.0
+TARGET = TrickyCoin-Qt
+VERSION = 1.0.2.0
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-lessThan(QT_MAJOR_VERSION, 5): CONFIG += static
+# lessThan(QT_MAJOR_VERSION, 5): CONFIG += static
 QMAKE_CXXFLAGS = -fpermissive
 
 greaterThan(QT_MAJOR_VERSION, 4) {
@@ -15,15 +15,15 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 
 win32 {
-    BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-    BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-    BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-    BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-    BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-    OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-    OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-    MINIUPNPC_INCLUDE_PATH=C:/deps/
-    MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+    BOOST_LIB_SUFFIX=-mgw49-mt-s-1_59
+    BOOST_INCLUDE_PATH=C:/lib/boost_1_59_0
+    BOOST_LIB_PATH=C:/lib/boost_1_59_0/stage/lib
+    BDB_INCLUDE_PATH=C:/lib/db-6.1.26.NC/build_unix
+    BDB_LIB_PATH=C:/lib/db-6.1.26.NC/build_unix
+    OPENSSL_INCLUDE_PATH=C:/lib/openssl-1.0.2d/include
+    OPENSSL_LIB_PATH=C:/lib/openssl-1.0.2d
+    MINIUPNPC_INCLUDE_PATH=C:/lib/
+    MINIUPNPC_LIB_PATH=C:/lib/miniupnpc
 }
 
 
@@ -62,7 +62,7 @@ QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
 win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 win32:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
-lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
+#lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
@@ -158,16 +158,23 @@ QMAKE_CLEAN += $$PWD/src/leveldb/libleveldb.a; cd $$PWD/src/leveldb ; $(MAKE) cl
     DEFINES += HAVE_BUILD_INFO
 }
 
-contains(USE_O3, 1) {
-    message(Building O3 optimization flag)
+contains(USE_OPTIMIZATION, 1) {
+    message(Building with optimization flag)
     QMAKE_CXXFLAGS_RELEASE -= -O2
     QMAKE_CFLAGS_RELEASE -= -O2
-    QMAKE_CXXFLAGS += -O3
-    QMAKE_CFLAGS += -O3
+    QMAKE_CXXFLAGS += -O2
+    QMAKE_CFLAGS += -O2
 }
 
-*-g++-32 {
-    message("32 platform, adding -msse2 flag")
+# *-g++-32 {
+#    message("32 platform, adding -msse2 flag")
+#
+#   QMAKE_CXXFLAGS += -msse2
+#    QMAKE_CFLAGS += -msse2
+#}
+
+contains(FORCE_SSE, 1) {
+    message("Forcing -msse2 flag")
 
     QMAKE_CXXFLAGS += -msse2
     QMAKE_CFLAGS += -msse2
@@ -467,7 +474,7 @@ macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/bitcoin.icns
-macx:TARGET = "trickycoin-Qt"
+macx:TARGET = "TrickyCoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
