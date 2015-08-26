@@ -34,4 +34,10 @@ Libs used:
 
 Added an [**UPX-compressed TrickyCoind binary**](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoind-UPX.zip) (UPX v.3.91w).
 
-You can build 'em by yourself. All process will be posted on forum and github repository ASAP.
+    TrickyCoind.exe MD5: f90445bda33669b8f7add4798ea5935e
+    TrickyCoind.zip MD5: c2118c8d28a1454039dc9c568865773b
+    TrickyCoind-UPX.exe MD5: 06275b3e0343b30747a0bd58b0a5b7ec
+    TrickyCoind-UPX.zip MD5: cbac8ca56ceebda601881de8cf923d4e
+
+
+You can build 'em by yourself. All process will be posted on [forum](http://forum.trickycoin.com/) and [github repository](https://www.github.com/trickyReborn/TrickyCoin) ASAP.
