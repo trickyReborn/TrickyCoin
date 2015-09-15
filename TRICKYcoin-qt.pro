@@ -15,7 +15,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 
 win32 {
-    BOOST_LIB_SUFFIX=-mgw49-mt-s-1_59
+    BOOST_LIB_SUFFIX=-mgw52-mt-s-1_59
     BOOST_INCLUDE_PATH=C:/lib/boost_1_59_0
     BOOST_LIB_PATH=C:/lib/boost_1_59_0/stage/lib
     BDB_INCLUDE_PATH=C:/lib/db-6.1.26.NC/build_unix
@@ -60,7 +60,7 @@ QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
 # This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
 }
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
-win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
+# win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 win32:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
 #lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
 
