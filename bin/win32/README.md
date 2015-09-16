@@ -28,7 +28,7 @@ Added an [**UPX-compressed TrickyCoin-Qt binary**](http://www.trickycoin.com/dl/
 
 All other hashes included in repository.
 
-[**TrickyCoind v.1.0.2.0**](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoind.zip) (static) build using:
+[**TrickyCoind v.1.0.2.0 x64**](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoind-x64.zip) (static) build using:
 * MSYS2 with mingw32-x86_64 gcc v.5.2 (thanks to pacman package manager).
 
 [**TrickyCoind v.1.0.2.0**](http://www.trickycoin.com/dl/1.0.2.0/TrickyCoind.zip) (static) build using:
